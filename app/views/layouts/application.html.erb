@@ -6,13 +6,13 @@
     <%= csp_meta_tag %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track'=> 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track'=> 'reload' %>
   </head>
 
   <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">TV-Saturn</a>
+    <a class="navbar-brand" href="/">TV-Saturno</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,9 +22,9 @@
         <li class="nav-item">
           <%= link_to "Inicio", root_path, class: 'nav-link' %>
         </li>
-        <li class="nav-item">
-          <%= link_to "Servicios",  principal_services_path, class: 'nav-link' %>
-        </li>
+<!--        <li class="nav-item">-->
+          <%#= link_to "Servicios",  principal_services_path, class: 'nav-link' %>
+<!--        </li>-->
         <li class="nav-item">
           <%= link_to "Contacto",  principal_contact_path, class: 'nav-link' %>
         </li>
