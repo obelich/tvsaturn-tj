@@ -8,9 +8,9 @@ default: &default
   host: localhost
   adapter: postgresql
   encoding: utf-8
-  pool: 5
-  username: postgres
-  password:  oscarm
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV.fetch("SECRET_USER") { postgres } %>
+  password:  <%= ENV.fetch("SECRET_PASSWORD") { oscarm } %>
   port: 5432
 
 development:
@@ -27,8 +27,5 @@ test:
 
 production:
   <<: *default
-  host: ec2-50-19-249-121.compute-1.amazonaws.com
-  pool: 5
-  username: ieomzirjcgoniu
-  password:  11346cc02f697a5cd3b0581d9d78452b69a62f374964ccf7cc5e563c584a5117
-  database: dans4nggbk4q8d
+  host: <%= ENV.fetch("SECRET_HOST") %>
+  database: <%= ENV.fetch("SECRET_DATABASE") %>
